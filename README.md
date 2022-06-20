@@ -37,13 +37,11 @@ python main.py --log-dir [log directory path] --c configs/cifar10_spr.yaml --e e
 python main.py --log-dir [log directory path] --c configs/cifar100_spr.yaml --e episodes/cifar100sup-split_epc1_a.yaml --override "superclass_noise=True|corruption_percent=0.4";
 ```
 
-
 ## For Training 
-''''
 For continually learning on noisy CIFAR10/CIFAR100-
-  python Train_cifar_task.py --noise
+python Train_cifar_task.py --noise
 For MNIST- 
-  python Train_mnist_task.py 
-''''
+python Train_mnist_task.py 
+
 
 If you find the implementation useful, please cite the paper!
