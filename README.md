@@ -39,9 +39,11 @@ python main.py --log-dir [log directory path] --c configs/cifar100_spr.yaml --e 
 
 
 ## For Training 
+''''
 For continually learning on noisy CIFAR10/CIFAR100-
   python Train_cifar_task.py --noise
 For MNIST- 
   python Train_mnist_task.py 
+''''
 
 If you find the implementation useful, please cite the paper!
