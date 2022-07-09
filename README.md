@@ -1,5 +1,5 @@
 ## CNLL: A Semi Supervised Approach for Continual Learning with Noisy Labels  
-This repository contains the official PyTorch implementation for our CVPR2022 workshop paper.
+This repository contains the official PyTorch implementation for our CVPR2022 workshop paper.(There are bugs that needs to be fixed!).
 
 ## ![](resources/algorithm.png)
 
@@ -48,4 +48,13 @@ python Train_mnist_task.py
 ```
 
 
-If you find the implementation useful, please cite the paper!
+Any Questions! Please do not hesitate to email nazmul.karim18@knights.ucf.edu. If you find the implementation useful, please cite the paper!
+
+    @InProceedings{Karim_2022_CVPR,
+        author    = {Karim, Nazmul and Khalid, Umar and Esmaeili, Ashkan and Rahnavard, Nazanin},
+        title     = {CNLL: A Semi-Supervised Approach for Continual Noisy Label Learning},
+        booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+        month     = {June},
+        year      = {2022},
+        pages     = {3878-3888}
+    }
