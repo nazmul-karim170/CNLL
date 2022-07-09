@@ -19,8 +19,7 @@ $ pip install -r requirements.txt
 ```
 
 ## Data and Log directory set-up
-create `checkpoints` and `data` directories.
-We recommend symbolic links as below.
+Please create `checkpoints` and `data` directories.
 
 ## Run for generating multitask dataset
 Specify parameters in `config` yaml, `episodes` yaml files.
