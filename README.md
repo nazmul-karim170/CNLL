@@ -18,10 +18,6 @@ Then, install the rest of the requirements.
 $ pip install -r requirements.txt
 ```
 
-## Data and Log directory set-up
-create `checkpoints` and `data` directories.
-We recommend symbolic links as below.
-
 ## First, generate the different tasks out of a single dataset
 User can perform task/class incemental learning in this manner. We create calss-wise tasks where each task M number of classes to deal with. Specify parameters in `config` yaml, `episodes` yaml files. Here config contains dataset description and episodes contains task information.
 
