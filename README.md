@@ -23,10 +23,6 @@ User can perform task/class incemental learning in this manner. We create calss-
 
 	python main.py --log-dir [log directory path] --c [config file path] --e [episode file path] --override "|" --random_seed [seed]
 
-To run MNIST symmetric noise 40% experiment-
-
-	python main.py --log-dir ./data --c configs/mnist_spr.yaml --e episodes/mnist-split_epc1_a.yaml --override "corruption_percent=0.4";
-
 To run CIFAR10 asymmetric noise 40% experiment-
 
 	python main.py --log-dir ./data --c configs/cifar10_spr.yaml --e episodes/cifar10-split_epc1_asym_a.yaml --override "asymmetric_noise=True|corruption_percent=0.4";
