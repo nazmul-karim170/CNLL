@@ -23,11 +23,11 @@ User can perform task/class incemental learning in this manner. We create calss-
 
 	python main.py --log-dir [log directory path] --c [config file path] --e [episode file path] --override "|" --random_seed [seed]
 
-To run CIFAR10 asymmetric noise 40% experiment-
+Run CIFAR10 asymmetric noise rate of 40% experiment-
 
 	python main.py --log-dir ./data --c configs/cifar10_spr.yaml --e episodes/cifar10-split_epc1_asym_a.yaml --override "asymmetric_noise=True|corruption_percent=0.4";
 
-To run CIFAR100 superclass symmetric noise 40% experiment. Noise label can be genarted within 20 supercalsses or random-
+Run CIFAR100 superclass symmetric noise rate of 40% experiment. Noise label can be genarted within 20 supercalsses or random.
 
 	python main.py --log-dir ./data --c configs/cifar100_spr.yaml --e episodes/cifar100sup-split_epc1_a.yaml --override "superclass_noise=True|corruption_percent=0.4";
 
