@@ -64,9 +64,9 @@ class DataScheduler():
     def __len__(self):
         return self.total_step
 
-    def eval(self,savepath,task_id, lab_uni, model, writer, step, eval_title):
+    def eval(self,dataset, savepath,task_id, lab_uni, model, writer, step, eval_title):
         for eval_dataset in self.eval_datasets.values():
-            eval_dataset.eval(savepath,task_id,lab_uni, model, writer, step, eval_title)
+            eval_dataset.eval(dataset, savepath,task_id,lab_uni, model, writer, step, eval_title)
 
 # ================
 # Generic Datasets
@@ -83,9 +83,9 @@ class BaseDataset(Dataset, ABC):
     def __len__(self):
         return self.dataset_size
 
-    def eval(self, savepath,task_id, lab_uni, model, writer: SummaryWriter, step, eval_title):
+    def eval(self, dataset, savepath,task_id, lab_uni, model, writer: SummaryWriter, step, eval_title):
         if self.config['eval']:
-            self._eval_model(savepath,task_id, lab_uni, model, writer, step, eval_title)
+            self._eval_model(dataset,savepath,task_id, lab_uni, model, writer, step, eval_title)
 
     @abstractmethod
     def _eval_model(self, model, writer: SummaryWriter, step, eval_title):
@@ -99,13 +99,13 @@ class ClassificationDataset(BaseDataset):
     num_classes = NotImplemented
     targets = NotImplemented
 
-    def _eval_model(self, savepath, task_id, lab_uni, model, writer: SummaryWriter, step, eval_title):
+    def _eval_model(self, dataset, savepath, task_id, lab_uni, model, writer: SummaryWriter, step, eval_title):
 
         totals   = []
         corrects = []
         test_image_features =[]
         test_labels   = []
-        print(lab_uni)
+        print("This task has samples from these classes:", lab_uni)
         for subset_name, subset in self.subsets.items():
             if subset_name in lab_uni:
                 data = DataLoader(subset, batch_size=self.config['eval_batch_size'],
@@ -113,9 +113,8 @@ class ClassificationDataset(BaseDataset):
                 total = 0.
                 correct = 0.
                 task_name = 'task_' + str(task_id)
-                print("Hey")
                 for x, y in iter(data):
-                    images, lab = x.to(model.device), y.to(model.device)
+                    images, lab = x, y
                     batch_size = images.size()[0]
 
                                 ### Make the labels Binary  ####
@@ -128,8 +127,8 @@ class ClassificationDataset(BaseDataset):
                     total += batch_size
 
 
-        np.save(savepath+'Cifar100_test_images_rand_0.2'+str(task_name), np.array(test_image_features))
-        np.save(savepath+'Cifar100_test_labels_rand_0.2'+str(task_name), np.array(test_labels))
+        np.save(os.path.join(savepath, dataset + '_Test_images_'+str(task_name)), np.array(test_image_features))
+        np.save(os.path.join(savepath, dataset + '_Test_labels_'+str(task_name)), np.array(test_labels))
         print("Test Dataset Saving Done ... ...")
 
 class NoisyLabel(ClassificationDataset):
