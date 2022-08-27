@@ -213,7 +213,7 @@ def warmup_standard(epoch,net,optimizer,dataloader):
         if args.noise_mode=='asym':         
             penalty = conf_penalty(outputs)
             if torch.isnan(penalty):
-                pass 
+                L = loss
             else:
                 L = loss + penalty      
         else:   
