@@ -25,8 +25,7 @@ We recommend symbolic links as below.
 ## First, generate the different tasks out of a single dataset
 User can perform task/class incemental learning in this manner. We create calss-wise tasks where each task M number of classes to deal with. Specify parameters in `config` yaml, `episodes` yaml files. Here config contains dataset description and episodes contains task information.
 
-
-python main.py --log-dir [log directory path] --c [config file path] --e [episode file path] --override "|" --random_seed [seed]
+	python main.py --log-dir [log directory path] --c [config file path] --e [episode file path] --override "|" --random_seed [seed]
 
 To run MNIST symmetric noise 40% experiment-
 
