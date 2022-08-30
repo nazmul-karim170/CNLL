@@ -28,7 +28,7 @@ Run CIFAR10 asymmetric noise rate of 40% experiment-
 
 	python main.py --log-dir ./data --c configs/cifar10_spr.yaml --e episodes/cifar10-split_epc1_asym_a.yaml --override "asymmetric_noise=True|corruption_percent=0.4";
 
-Run CIFAR100 superclass symmetric noise rate of 40% experiment. Noise label can be genarted within 20 supercalsses or random.
+Run CIFAR100 superclass symmetric noise rate of 40% experiment. Noise label can be genarted within 20 supercalsses or randomly.
 
 	python main.py --log-dir ./data --c configs/cifar100_spr.yaml --e episodes/cifar100sup-split_epc1_a.yaml --override "superclass_noise=True|corruption_percent=0.4";
 
