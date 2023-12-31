@@ -1,14 +1,26 @@
-## CNLL: A Semi Supervised Approach for Continual Learning with Noisy Labels  
-This repository contains the official PyTorch implementation for our CVPR2022 workshop paper.
-[Link](https://openaccess.thecvf.com/content/CVPR2022W/CLVision/papers/Karim_CNLL_A_Semi-Supervised_Approach_for_Continual_Noisy_Label_Learning_CVPRW_2022_paper.pdf)
+<h2 align="center"> <a href="https://github.com/nazmul-karim170/CNLL-Continual_Learning_Noisy_Labels">CNLL: A Semi-Supervised Approach for Continual Learning with Noisy Labels </a></h2>
+<h5 align="center"> If you like our project, please give us a star ⭐ on GitHub for the latest update.  </h2>
 
-## ![](resources/algorithm.png)
+<h5 align="center">
 
-## System Dependencies
+[![Paper](https://openaccess.thecvf.com/content/CVPR2022W/CLVision/papers/Karim_CNLL_A_Semi-Supervised_Approach_for_Continual_Noisy_Label_Learning_CVPRW_2022_paper.pdf)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/nazmul-karim170/CNLL-Continual_Learning_Noisy_Labels/blob/main/LICENSE) 
+
+
+</h5>
+
+## [Paper](https://openaccess.thecvf.com/content/CVPR2022W/CLVision/papers/Karim_CNLL_A_Semi-Supervised_Approach_for_Continual_Noisy_Label_Learning_CVPRW_2022_paper.pdf) 
+
+
+## Code for Training 
+
+### ![](resources/algorithm.png)
+
+### System Dependencies
 - Python >= 3.6.1
 - CUDA >= 9.0 supported GPU
 
-## Installation
+### Installation
 Using virtual env is recommended.
 ```
 $ conda create --name CNLL python=3.6
@@ -19,7 +31,7 @@ Then, install the rest of the requirements.
 $ pip install -r requirements.txt
 ```
 
-## First, generate the different tasks out of a single dataset
+### First, generate the different tasks out of a single dataset
 User can perform task/class incemental learning in this manner. We create calss-wise tasks where each task M number of classes to deal with. Specify parameters in `config` yaml, `episodes` yaml files. Here config contains dataset description and episodes contains task information.
 
 	python main.py --log-dir [log directory path] --c [config file path] --e [episode file path] --override "|" --random_seed [seed]
@@ -34,7 +46,7 @@ Run CIFAR100 superclass symmetric noise rate of 40% experiment. Noise label can 
 
 
 
-## Run CNLL Algorithm for Continual Noisy Label Learning on These Tasks
+### Run CNLL Algorithm for Continual Noisy Label Learning on These Tasks
 
 Make sure the ".npy" files for different tasks are in the same data folder. Check "data_path" argument in "Train_cifar_CNLL.py". Also, please make sure noise mode and noise ratio are consistent with the task specification. 
 
