@@ -3,7 +3,7 @@
 
 <h5 align="center">
 
-[![arXiv](https://arxiv.org/pdf/2204.09881.pdf)
+[![arXiv](https://img.shields.io/badge/Arxiv-2312.09313-b31b1b.svg?logo=arXiv)](https://arxiv.org/pdf/2204.09881.pdf)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/nazmul-karim170/CNLL-Continual_Learning_Noisy_Labels/blob/main/LICENSE) 
 
 
