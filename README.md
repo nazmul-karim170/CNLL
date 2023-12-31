@@ -3,7 +3,7 @@
 
 <h5 align="center">
 
-[![Paper](https://openaccess.thecvf.com/content/CVPR2022W/CLVision/papers/Karim_CNLL_A_Semi-Supervised_Approach_for_Continual_Noisy_Label_Learning_CVPRW_2022_paper.pdf)
+[![arXiv](https://arxiv.org/pdf/2204.09881.pdf)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/nazmul-karim170/CNLL-Continual_Learning_Noisy_Labels/blob/main/LICENSE) 
 
 
