@@ -32,7 +32,7 @@ $ pip install -r requirements.txt
 ```
 
 ### First, generate the different tasks out of a single dataset
-User can perform task/class incemental learning in this manner. We create calss-wise tasks where each task M number of classes to deal with. Specify parameters in `config` yaml, `episodes` yaml files. Here config contains dataset description and episodes contains task information.
+Users can perform task/class incremental learning in this manner. We create class-wise tasks where each task has M number of classes to deal with. Specify parameters in `config` yaml, `episodes` yaml files. Here config contains dataset description and episodes contain task information.
 
 	python main.py --log-dir [log directory path] --c [config file path] --e [episode file path] --override "|" --random_seed [seed]
 
@@ -40,7 +40,7 @@ Run CIFAR10 asymmetric noise rate of 40% experiment-
 
 	python main.py --log-dir ./data --c configs/cifar10_spr.yaml --e episodes/cifar10-split_epc1_asym_a.yaml --override "asymmetric_noise=True|corruption_percent=0.4";
 
-Run CIFAR100 superclass symmetric noise rate of 40% experiment. Noise label can be genarted within 20 supercalsses or randomly.
+Run CIFAR100 superclass symmetric noise rate of 40%  experiment. Noise labels can be generated within 20 superclasses or randomly.
 
 	python main.py --log-dir ./data --c configs/cifar100_spr.yaml --e episodes/cifar100sup-split_epc1_a.yaml --override "superclass_noise=True|corruption_percent=0.4";
 
@@ -50,7 +50,7 @@ Run CIFAR100 superclass symmetric noise rate of 40% experiment. Noise label can 
 
 Make sure the ".npy" files for different tasks are in the same data folder. Check "data_path" argument in "Train_cifar_CNLL.py". Also, please make sure noise mode and noise ratio are consistent with the task specification. 
 
-For CIFAR10 asymmetric noise rate of 40% experiment-
+For the CIFAR10 asymmetric noise rate of 40% experiment-
 
 	python Train_cifar_CNLL.py --dataset cifar10 --noise_mode asym --r 0.4
 	
@@ -59,11 +59,11 @@ For CIFAR100 symmetric and superclass noise rate of 40% experiment-
 
 	python Train_cifar_CNLL.py --dataset cifar100 --noise_mode sup --r 0.4	
 	 
-For CIFAR100 symmetric and random noise rate of 40% experiment-
+For the CIFAR100 symmetric and random noise rate of 40% experiment-
 
 	python Train_cifar_CNLL.py --dataset cifar100 --noise_mode rand --r 0.4
 	
-Thanks! If you have any queris please send email nazmul.karim18@knights.ucf.edu. If you find the implementation useful, please cite our paper!
+Thanks! If you have any queries please send an email nazmul.karim170@gmail.com. If you find the implementation useful, please cite our paper!
 
     @InProceedings{Karim_2022_CVPR,
         author    = {Karim, Nazmul and Khalid, Umar and Esmaeili, Ashkan and Rahnavard, Nazanin},
